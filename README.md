@@ -10,7 +10,7 @@ Before you can use this script, make sure you have the following:
 - Required Python libraries installed. You can install them using `pip`:
 
 ```bash
-pip install requests pandas
+pip install python-dotenv
 ```
 
 ## Usage
@@ -19,15 +19,15 @@ pip install requests pandas
 
 2. Open the terminal and navigate to the directory where the script is located.
 
-3. Run the script with the following command:
+3. Create a `.env` file similar to `.example.env` and add in values for `USER_TOKEN`, `APP_TOKEN`, and `USER_ID` with your Skip The Dishes credentials.
+
+4. Run the script with the following command:
 
 ```bash
-python skip.py --user_token YOUR_USER_TOKEN --app_token YOUR_APP_TOKEN --user_id YOUR_USER_ID
+python skip.py
 ```
 
-Replace `YOUR_USER_TOKEN`, `YOUR_APP_TOKEN`, and `YOUR_USER_ID` with your Skip The Dishes credentials.
-
-4. The script will fetch your earnings statements for the year 2022, separate tips from earnings, and generate a table with total earnings in tips and total earnings without tips. The table will be displayed in the terminal and saved to a CSV file named `earnings_report_2022.csv`.
+4. The script will fetch your earnings statements for the year 2022, separate tips from earnings, and generate a table with total earnings in tips and total earnings without tips. The table will be displayed in the terminal.
 
 ## Example Output
 
@@ -42,7 +42,6 @@ Replace `YOUR_USER_TOKEN`, `YOUR_APP_TOKEN`, and `YOUR_USER_ID` with your Skip T
 ## Note
 
 - This script relies on your Skip The Dishes credentials, so keep them confidential.
-- The generated CSV file (`earnings_report_2022.csv`) can be used for tax purposes or further analysis.
 
 ## Disclaimer
 
